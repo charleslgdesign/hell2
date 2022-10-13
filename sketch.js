@@ -10,6 +10,7 @@ let tax_evasion
 function preload() {
   img = loadImage('earth.jpeg');
   beat = loadSound('140bpm_tax_evasion.mp3')
+  getAudioContext()
 }
 
 // draw a sphere with radius 200
