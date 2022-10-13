@@ -3,16 +3,24 @@ let xOff = -4;
 let yOff = 1;
 let zOff = 2;
 
+let tax_evasion
+
 
 
 function preload() {
   img = loadImage('earth.jpeg');
+  beat = loadSound('140bpm_tax_evasion.mp3')
 }
 
 // draw a sphere with radius 200
 function setup(){
 
 
+ 
+  
+  button = createButton('140bpm_tax_evasion');
+  button.position(20, 20);
+  button.mouseClicked(playBeat);
 
 
     var cnv = createCanvas(1000, 700, WEBGL);
@@ -23,7 +31,11 @@ function setup(){
 }
 
 
+
+
 function draw(){
+
+
   background(255);
 
   noStroke();
@@ -38,4 +50,10 @@ function draw(){
   yOff+=0.01;
   zOff+=0.0001;
 
+  
+
+}
+
+function playBeat() {
+  beat.play()
 }
